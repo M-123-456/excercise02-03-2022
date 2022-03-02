@@ -86,44 +86,38 @@ console.log();
   ...
 ]
 */
-// const getProductsOrderedByCustomer = (customerId) => {
-//   // get orders from the customer
-//   const custOrders = orders.filter((m) => m.customerID === customerId);
-//   // get product ID of the order
 
-//   // const productIds = custOrders.forEach((m) =>
-//   //   m.details.map((m) => m.productID)
-//   // );
-
-//   // return productIds.map((m) => m.name);
-// };
-
+// function getProductsById to get product name by product ID
 const getProductsById = (productId) => {
   const productName = products.find((m) => m.productID === productId).name;
   return productName;
 };
 
+// function getProductsOrderedByCustomer to get name of products ordered by a customer
 const getProductsOrderedByCustomer = (customerId) => {
   // get orders from the customer
   const custOrders = orders.filter((m) => m.customerID === customerId);
 
-  // get product ID of ordered products by the customer
+  // get product IDs of ordered products by the customer
+  // orders.map ->
   const productIds = custOrders
     .map((m) => m.details.map((n) => n.productID))
     .flat();
 
-  //
+  // get array with names of products listed up in productIds
   const productNames = [];
+  // go through the productIds
   productIds.forEach((id) => {
+    // push the product name got by getProductsById to array productNames
     productNames.push(getProductsById(id));
   });
 
   return productNames;
 };
 
-const custOrders = orders.filter((m) => m.customerID === "AROUT");
-console.log(custOrders);
-const idArray = custOrders.map((m) => m.details.map((n) => n.productID)).flat();
-
-
 console.log(getProductsOrderedByCustomer("AROUT"));
+
+// const custOrders = orders.filter((m) => m.customerID === "AROUT");
+// console.log(custOrders.map((m) => m.details.map((n) => n.productID)).flat());
+
+// const idArray = custOrders.map((m) => m.details.map((n) => n.productID)).flat();
