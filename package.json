@@ -2,8 +2,8 @@
   "name": "excercise02-03-2022",
   "version": "1.0.0",
   "description": "Use JavaScript modules to practice using the ES6 higher-order functions.",
-  "type": "module",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
