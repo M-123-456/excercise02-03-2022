@@ -1,0 +1,21 @@
+{
+  "name": "excercise02-03-2022",
+  "version": "1.0.0",
+  "description": "Use JavaScript modules to practice using the ES6 higher-order functions.",
+  "type":"module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-123-456/excercise02-03-2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-123-456/excercise02-03-2022/issues"
+  },
+  "homepage": "https://github.com/M-123-456/excercise02-03-2022#readme"
+}
